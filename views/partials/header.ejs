@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TNPproto</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav>
+            <a id="home" href="/" <% if(active==0){ %> class = "active"<%}%>>Home</a>
+            <ul>
+                <li <% if(active==1){ %> class = "active"<%}%>><a href="/about">About</a></li>
+                <li <% if(active==2){ %> class = "active"<%}%>><a href="/programme/btech">UG & PG programmes</a></li>
+                <li <% if(active==3){ %> class = "active"<%}%>><a href="/innovations">Innovations</a></li>
+                <li <% if(active==4){ %> class = "active"<%}%>><a href="/statistics">Statistics</a></li>
+                <li <% if(active==5){ %> class = "active"<%}%>><a href="/contact/btech">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <img src="/images/logo.png" alt="dtu logo">
+            <div id="dtu">
+                <h1>DELHI TECHNOLOGICAL UNIVERSITY</h1>
+                <h3>formerly DELHI COLLEGE OF ENGINEERING</h3>
+                <h3>(Under Act 6 of 2009, Govt of NCT Delhi)</h3>
+            </div>
+            <img id="dtu-top" src="/images/dtutop.jpg" alt="dtu top">
+        </header>
+        <hr>

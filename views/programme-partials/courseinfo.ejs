@@ -1,0 +1,32 @@
+    <section>
+            <h2><%= courses[0].graduationType %> Programmes</h2>
+            <h2 class="mini-heading"><%= courses[0].courseName %></h2>
+            <% courses[0].data.forEach(data=>{ %>
+                <% if(sideActive==="btech"){ %>
+                    <% if(data.description !== ""){ %>
+                        <h3><%= data.departmentName %></h3>
+                        <p><%= data.description %></p>
+                    <% } %>
+                <% }else if(sideActive ==="mtech"){ %>
+                    <% if(data.program[0].description !== "") {%>
+                        <h1 class="main-sub-heading"><%= data.departmentName %></h1>
+                            <% data.program.forEach(program=>{ %>
+                                <h3><%= program.name %></h3>
+                                <p><%= program.description %></p>
+                            <% }) %>
+                        <br>
+                        <%}%>
+                <% }else if(sideActive ==="mba"){ %>
+                    <h1 class="main-sub-heading">About DSM</h1>
+                    <p><%= data.about %></p>
+                    <h3>Course offered in Technical Specialization area</h3>
+                        <% data.technicalSpec.forEach(tech=>{ %>
+                            <p class="red-green mod1"><strong><%= tech.name %></strong></p>
+                        <% }) %>
+                    <h3>Course offered in Functional Specialization area</h3>
+                        <% data.functionalSpec.forEach(func=>{ %>
+                            <p class="red-green mod1"><strong><%= func.name %></strong></p>
+                        <% }) %>
+                <% }%>
+            <% }) %>
+        </section>

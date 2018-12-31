@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+    <article class="double-col onebythree-col">
+        <section>
+            <h2 <% if(sideActive==="btech"){ %> class = "active"<%}%>><a href="/contact/btech">B.Tech</a></h2>
+            <h2 <% if(sideActive==="mtech"){ %> class = "active"<%}%>><a href="/contact/mtech">M.Tech</a></h2>
+            <h2 <% if(sideActive==="mba"){ %> class = "active"<%}%>><a href="/contact/mba">MBA</a></h2>
+        </section>
+        <section>
+            <h2>Placement Coordinators</h2>
+            <h2 class="mini-heading"><%= contacts[0].courseName %></h2>
+            <% contacts.forEach(data=>{ %>
+                <h3><%= data.departmentName %></h3>
+                <p><strong>Email:</strong> <%= data.Email %></p>
+                <% if(data.contact.length!==0){%>
+                    <p><strong>Mobile:</strong></p>
+                    <% } %>
+                <% data.contact.forEach(coordinator=>{ %>
+                    <p class="red-green"><span><strong><%= coordinator.name %></strong></span><span><strong><%= coordinator.mobile %></strong></span></p>
+                <% }) %>
+            <% }) %>
+            <h2 class="mini-heading">HOD</h2>
+            <p><strong>Dr. Rajesh Rohilla</strong></p>
+            <p>Head of department, T&P</p>
+            <p><strong>Email:</strong> placements@dtu.ac.in</p>
+            <p class="red-green"><span><strong>Mobile: </strong></span><span><strong>9810530528</strong></span></p>
+            <h2 class="mini-heading">Associate Head</h2>
+            <p><strong>Dr. Anil Singh Parihar</strong>></p>
+            <p>Associate Head, T&P</p>
+            <p class="red-green"><span><strong>Mobile: </strong></span><span><strong>8800223330</strong></span></p>
+        </section>
+    </article>
+<% include ./partials/footer %>

@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+    <article class="double-col onebythree-col" >
+        <section>
+            <h2 <% if(sideActive==="btech"){ %> class = "active"<%}%>><a href="/programme/btech">B.Tech</a></h2>
+            <h2 <% if(sideActive==="mtech"){ %> class = "active"<%}%>><a href="/programme/mtech">M.Tech</a></h2>
+            <h2 <% if(sideActive==="mba"){ %> class = "active"<%}%>><a href="/programme/mba">MBA</a></h2>
+            <h2 <% if(sideActive==="seats"){ %> class = "active"<%}%>><a href="/programme/seats">Seat Matrix(2017)</a></h2>
+        </section>
+        <% if(sideActive!=="seats"){ %>
+            <% include ./programme-partials/courseinfo.ejs %>
+        <% }else{ %>
+            <% include ./programme-partials/seatmatrix.ejs %>
+        <% } %>
+    </article>
+<% include ./partials/footer %>
