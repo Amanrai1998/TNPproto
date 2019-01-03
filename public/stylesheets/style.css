@@ -27,10 +27,15 @@ nav ul,footer ul{
 nav ul li,#home{
   padding: 10px 20px;
   transition: background-color 0.2s ease-in;
-
 }
 nav ul li:hover,#home:hover,.onebythree-col section:nth-of-type(1) h2:hover{
   background-color: rgba(30,17,92,0.8);
+}
+nav i.fa-align-justify{
+  color: #dcd7f4;
+  display: none;
+  float: right;
+  font-size: 1.3em;
 }
 footer {
   margin-top: 50px;
@@ -243,6 +248,15 @@ article section table{
   }
   nav ul{
     padding: 0;
+    margin: 0;
+  }
+   nav .nav-links{
+    display: none;
+     padding: 0;
+    height: 0;
+  }
+   nav i.fa-align-justify{
+    display: inline-block;
   }
   header{
     flex-direction: column;
